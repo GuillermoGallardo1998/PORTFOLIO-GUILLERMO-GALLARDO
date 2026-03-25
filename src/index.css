@@ -1,0 +1,174 @@
+/* index.css*/
+
+@import "tailwindcss";
+
+/* CLEAR MODE */
+:root {
+  --primary: #BFC9D1;
+  --secondary: #F5F5F5;
+  --text-color: #111827;
+
+  --button-bg: #BFC9D1;
+  --button-active: #55835A;
+  --hover-color: #8B1A1A;
+
+  --text-shadow-strong: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  --component-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9);
+  --component-shadow-soft: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+/* DARK MODE */
+.dark {
+  --primary: #101010;
+  --secondary: #212121;
+  --text-color: #F5F5F5;
+}
+
+/* OWN PROFITS */
+.componentShadowStrong {
+  box-shadow: var(--component-shadow);
+}
+.componentShadowSoft {
+  box-shadow: var(--component-shadow-soft);
+}
+.textShadow {
+  text-shadow: var(--text-shadow-strong);
+}
+
+/* GLOBAL APPLICATION */
+html,
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  letter-spacing: 0.2px;
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+}
+
+/* PRELOADER ANIMATION */
+.preloader-title {
+  opacity: 0;
+  transform: translateY(-120px);
+  animation: title-fade-in 1.5s ease forwards;
+}
+@keyframes title-fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.preloader-ball-element {
+  animation: ball-pure-bounce 3.5s ease-out forwards;
+  mix-blend-mode: destination-out;
+}
+.preloader-gate.is-opening {
+  animation: fade-out-bg 0.8s 0.2s forwards;
+}
+.preloader-gate.is-opening .preloader-ball-element {
+  animation: ball-expand 0.8s forwards ease-in;
+}
+@keyframes ball-pure-bounce {
+  0% { transform: translateY(-100vh); }
+  35% { transform: translateY(0); }
+  50% { transform: translateY(-300px); }
+  65% { transform: translateY(0); }
+  75% { transform: translateY(-150px); }
+  85% { transform: translateY(0); }
+  92% { transform: translateY(-70px); }
+  100% { transform: translateY(0); }
+}
+@keyframes ball-expand {
+  0% { transform: scale(1); }
+  100% { transform: scale(50); }
+}
+@keyframes fade-out-bg {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* PULSATING LOGO */
+.logo-pulse {
+  animation: pulseGlow 4s infinite ease-in-out;
+}
+@keyframes pulseGlow {
+  0% { color: var(--text-color); }
+  25% { color: #55835A; }
+  50% { color: var(--text-color); }
+  75% { color: #55835A; }
+  100% { color: var(--text-color); }
+}
+
+/* COLOR CHANGE IN THE HERO */
+.animated-color {
+  animation: colorChange 10s linear infinite;
+}
+@keyframes colorChange {
+  0% { color: #ff0000; }
+  8% { color: #ff7f00; }
+  16% { color: #ffff00; }
+  25% { color: #7fff00; }
+  33% { color: #00ff00; }
+  41% { color: #00ffff; }
+  50% { color: #0000ff; }
+  58% { color: #4b0082; }
+  66% { color: #8b00ff; }
+  75% { color: #ff1493; }
+  83% { color: #ff69b4; }
+  91% { color: #b8860b; }
+  100% { color: #ff0000; }
+}
+
+/* ICONS FROM THE TECHNOLOGY SECTION */
+.techIcon img {
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease-in-out 0s;
+}
+.techIcon:hover img {
+  filter: brightness(1) invert(0);
+  transition-delay: 0s;
+}
+.techIcon:not(:hover) img {
+  transition-delay: 2s;
+}
+
+/* SKELETON ANIMATION */
+.shimmer {
+  background: linear-gradient(180deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.15) 40%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0.15) 60%,
+      transparent 100%);
+  animation: shimmerUp 1.6s infinite;
+}
+@keyframes shimmerUp {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
+}
+
+/* CERTIFICATE ANIMATION */
+.gridFade {
+  animation: gridFade 1s ease;
+}
+@keyframes gridFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CUSTOME CURSOR */
+@media (max-width: 1024px) {
+  .custom-cursor {
+    display: none !important;
+  }
+}
