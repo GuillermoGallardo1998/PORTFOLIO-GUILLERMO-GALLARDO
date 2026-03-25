@@ -1,73 +1,60 @@
-# React + TypeScript + Vite
+<h1 align="center">Portfolio Web - Guillermo Gallardo Pino</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img src="https://i.imgur.com/QzgcEyn.png" width="800" alt="Tiamo Makeup Landing Page Preview">
+</p>
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Description
 
-## React Compiler
+Professional web project developed by Guillermo Gallardo Pino, showcasing modern frontend and fullstack skills.
+The project includes interactive components, animations, responsive design, and high accessibility, prioritizing clean and maintainable code while following best web development practices.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Primarily developed locally, with hand-coded animations and interactivity using JavaScript (ES6+) and TailwindCSS, without relying on external libraries for most of the UI. The deployed version ensures high fidelity between development and production.
 
-## Expanding the ESLint configuration
+Built with React, Vite, TypeScript, TailwindCSS, and JavaScript (ES6+).
+Integrates EmailJS and ToastNotify for forms and notifications, and Framer Motion for advanced animations.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The project emphasizes performance, accessibility, basic SEO, and follows clean code standards using ESLint. It is deployed on Firebase Hosting.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Technologies Used
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Frontend:** React, Vite, TypeScript, JavaScript (ES6+), TailwindCSS
+- **Animations & Interactivity:** Framer Motion, ToastNotify
+- **Form Integration:** EmailJS  
+- **Code Quality:** ESLint
+- **Deployment & Hosting:** Firebase Hosting
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🎯 Key Features & Areas Applied
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Responsive Web Design / Mobile-first approach
+- Smooth animations and transitions with Framer Motion
+- Interactive notifications with ToastNotify
+- Automated forms with EmailJS
+- Accessibility (ARIA attributes, semantic HTML)
+- Modular CSS organized with BEM for maintainability
+- Local-first development with high production fidelity
+- Performance optimization and enhanced user experience
+
+---
+
+## 🚀 Live Demo
+
+🔗 [View Live Page](https://guillermogallardopino.tech/)
+
+---
+
+## 📂 Installation & Local Setup
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/GuillermoGallardo1998/PORTFOLIO-GUILLERMO-GALLARDO.git
+cd Portfolio-Web-Guillermo-Gallardo
+npm install
+npm run dev
