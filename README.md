@@ -43,6 +43,14 @@ The project emphasizes performance, accessibility, basic SEO, and follows clean 
 
 ---
 
+## Personalized email sent directly via EmailJS
+
+<p align="center">
+  <img src="https://i.imgur.com/Vkpx3kP.png" width="800" alt="Tiamo Makeup Landing Page Preview">
+</p>
+
+---
+
 ## 🚀 Live Demo
 
 🔗 [View Live Page](https://guillermogallardopino.tech/)
