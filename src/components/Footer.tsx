@@ -79,13 +79,22 @@ export default function Footer() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
 
+    // Filtrar números para teléfono
     if (name === "phone") {
       const onlyNumbers = value.replace(/[^\d+]/g, "");
       setFormData((prev) => ({ ...prev, [name]: onlyNumbers }));
       return;
     }
 
+    // Limitar descripción
     if (name === "description" && value.length > 1000) return;
+
+    // ❌ Proteger contra links y etiquetas HTML
+    const forbiddenPattern = /(https?:\/\/[^\s]+)|(<[^>]*>)|(\bscript\b)/gi;
+    if (forbiddenPattern.test(value)) {
+      setErrors((prev) => ({ ...prev, [name]: language === "es" ? "No se permiten links ni código" : "Links or code not allowed" }));
+      return;
+    }
 
     setFormData((prev) => ({ ...prev, [name]: value }));
     setErrors((prev) => ({ ...prev, [name]: "" }));
@@ -94,23 +103,23 @@ export default function Footer() {
   const validate = (): boolean => {
     const newErrors: Errors = {};
 
+    const forbiddenPattern = /(https?:\/\/[^\s]+)|(<[^>]*>)|(\bscript\b)/gi;
+
     if (!formData.name.trim()) newErrors.name = language === "es" ? "El nombre es obligatorio" : "Name is required";
+    else if (forbiddenPattern.test(formData.name)) newErrors.name = language === "es" ? "No se permiten links ni código" : "Links or code not allowed";
 
     if (!formData.phone.trim()) newErrors.phone = language === "es" ? "El teléfono es obligatorio" : "Phone is required";
-    else if (!/^\+?\d{7,15}$/.test(formData.phone))
-      newErrors.phone = language === "es" ? "Teléfono inválido" : "Invalid phone number";
+    else if (!/^\+?\d{7,15}$/.test(formData.phone)) newErrors.phone = language === "es" ? "Teléfono inválido" : "Invalid phone number";
 
     if (!formData.email.trim()) newErrors.email = language === "es" ? "El email es obligatorio" : "Email is required";
-    else if (!/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(formData.email))
-      newErrors.email = language === "es" ? "Email inválido" : "Invalid email";
+    else if (!/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(formData.email)) newErrors.email = language === "es" ? "Email inválido" : "Invalid email";
 
     if (!formData.subject.trim()) newErrors.subject = language === "es" ? "El asunto es obligatorio" : "Subject is required";
+    else if (forbiddenPattern.test(formData.subject)) newErrors.subject = language === "es" ? "No se permiten links ni código" : "Links or code not allowed";
 
     if (!formData.description.trim()) newErrors.description = language === "es" ? "La descripción es obligatoria" : "Description is required";
-    if (formData.description.length > 1000)
-      newErrors.description = language === "es"
-        ? "Máximo 1000 caracteres"
-        : "Maximum 1000 characters";
+    else if (formData.description.length > 1000) newErrors.description = language === "es" ? "Máximo 1000 caracteres" : "Maximum 1000 characters";
+    else if (forbiddenPattern.test(formData.description)) newErrors.description = language === "es" ? "No se permiten links ni código" : "Links or code not allowed";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -302,7 +311,7 @@ export default function Footer() {
       </div>
       {open && (
         <div
-          className="p-5 fixed inset-0 bg-(--primary)/60 flex justify-center items-center z-100"
+          className="p-5 fixed inset-0 bg-(--primary)/60 overflow-auto flex justify-center items-start z-100 pt-30 pb-20"
           onClick={() => setOpen(false)}
         >
           <div
