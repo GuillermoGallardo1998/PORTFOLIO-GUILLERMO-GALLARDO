@@ -79,17 +79,14 @@ export default function Footer() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
 
-    // Filtrar números para teléfono
     if (name === "phone") {
       const onlyNumbers = value.replace(/[^\d+]/g, "");
       setFormData((prev) => ({ ...prev, [name]: onlyNumbers }));
       return;
     }
 
-    // Limitar descripción
     if (name === "description" && value.length > 1000) return;
 
-    // ❌ Proteger contra links y etiquetas HTML
     const forbiddenPattern = /(https?:\/\/[^\s]+)|(<[^>]*>)|(\bscript\b)/gi;
     if (forbiddenPattern.test(value)) {
       setErrors((prev) => ({ ...prev, [name]: language === "es" ? "No se permiten links ni código" : "Links or code not allowed" }));
