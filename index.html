@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Preload Img Hero -->
     <link rel="preload" as="image" href="/images/GuillermoHero.webp" imagesizes="(max-width: 768px) 360px, 720px" fetchPriority="high">
-    <!-- Preload Google Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    </noscript>
     <!-- Logo -->
     <link rel="icon" type="image/png" href="/icons/Favicon.png" />
     <link rel="apple-touch-icon" href="/icons/Favicon.png" />

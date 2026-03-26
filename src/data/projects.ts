@@ -65,6 +65,7 @@ export const projects: Project[] = [
         "/images/es/FocustarAbout.webp",
         "/images/es/FocustarFooter.webp",
         "/images/es/Focustar404.webp",
+        "/images/es/FocustarEmail.webp",
       ],
       en: [
         "/images/en/TaskList-EN.webp",
@@ -81,6 +82,7 @@ export const projects: Project[] = [
         "/images/en/FocustarAbout-EN.webp",
         "/images/en/FocustarFooter-EN.webp",
         "/images/en/Focustar404-EN.webp",
+        "/images/es/FocustarEmail.webp",
       ]
     },
     technologies: ["React", "Vite", "JavaScript", "Tailwind", "Modular Component", "React Hooks", "Zustand", "Chained Timers", "Block Execution Engine", "Hybrid Persistence (Local + Cloud)", "Firebase", "Form Automation", "ESLint", "Git", "GitHub", "Scalable Architecture", "Hand-coded with CSS + JS"],
@@ -137,7 +139,8 @@ export const projects: Project[] = [
         "/images/es/Tiamomakeup-Testimony.webp",
         "/images/es/Tiamomakeup-Request.webp",
         "/images/es/Tiamomakeup-Faq.webp",
-        "/images/es/Tiamomakeup-Footer.pnwebpg",
+        "/images/es/Tiamomakeup-Footer.webp",
+        "/images/es/TiamoMkeupEmail.webp",
       ],
       en: [
         "/images/es/Tiamomakeup-ServicesFaq.webp",
@@ -153,6 +156,7 @@ export const projects: Project[] = [
         "/images/es/Tiamomakeup-Request.webp",
         "/images/es/Tiamomakeup-Faq.webp",
         "/images/es/Tiamomakeup-Footer.webp",
+        "/images/es/TiamoMkeupEmail.webp",
       ]
     },
     technologies: ["React", "Vite", "JavaScript", "BEM", "Firebase", "EmailJS", "ESLint", "Hand-coded with CSS + JS"],
