@@ -22,10 +22,11 @@ The project emphasizes performance, accessibility, basic SEO, and follows clean 
 
 ## 🛠️ Technologies Used
 
-- **Frontend:** React, Vite, TypeScript, JavaScript (ES6+), TailwindCSS
-- **Animations & Interactivity:** Framer Motion, ToastNotify
+- **Frontend & Frameworks:** React, Vite, TypeScript, JavaScript (ES6+), TailwindCSS, Modular Component Architecture
+- **State & Logic Management** React Hooks (useState, useEffect)
+- **Animations & Interactivity:** Framer Motion, react-hot-toast, react-fast-marquee
 - **Form Integration:** EmailJS  
-- **Code Quality:** ESLint
+- **Code Quality:** ESLint, Git & GitHub
 - **Deployment & Hosting:** Firebase Hosting
 
 ---
