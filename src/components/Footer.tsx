@@ -24,6 +24,7 @@ export default function Footer() {
   const text = {
     es: {
       rights: "Todos los derechos reservados",
+      DownloadCV: "Ver mi currículum",
       sendMail: "Contáctame por correo",
       modalTitle: "Envíame un mensaje",
       name: "Tu nombre completo",
@@ -35,6 +36,7 @@ export default function Footer() {
     },
     en: {
       rights: "All rights reserved",
+      DownloadCV: "View My Resume",
       sendMail: "Contact me by email",
       modalTitle: "Send me a message",
       name: "Your full name",
@@ -255,13 +257,24 @@ export default function Footer() {
               <br />
               Guillermo Gallardo Pino
             </motion.div>
-            <motion.div variants={itemVariant} className="flex justify-center">
+            <motion.div variants={itemVariant} className="flex flex-col justify-center items-center gap-8">
               <button
                 onClick={() => setOpen(true)}
                 className="text-lg md:text-xl px-6 py-4 bg-(--text-color) text-(--secondary) textShadow font-semibold rounded-xl componentShadowSoft transform-gpu hover:scale-103 transition-transform duration-300 ease-in-out cursor-pointer"
               >
                 {t.sendMail}
               </button>
+              <a
+                href="https://drive.google.com/drive/folders/1HZGK1_phNj91ewPjeMnb6DKo0venG7bx?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button
+                  className="text-lg md:text-xl px-6 py-4 bg-(--text-color) text-(--secondary) textShadow font-semibold rounded-xl componentShadowSoft transform-gpu hover:scale-103 transition-transform duration-300 ease-in-out cursor-pointer"
+                >
+                  {t.DownloadCV}
+                </button>
+              </a>
             </motion.div>
             <motion.div variants={itemVariant} className="text-(--text-color)/80 text-center space-y-2 textShadow md:text-lg">
               <a
