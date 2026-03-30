@@ -32,7 +32,7 @@ export default function Technologies() {
       variants={sectionVariant}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.2 }}
       className="py-30 px-10 lg:px-20 bg-(--primary) flex flex-col justify-center items-center"
     >
       <motion.h2
