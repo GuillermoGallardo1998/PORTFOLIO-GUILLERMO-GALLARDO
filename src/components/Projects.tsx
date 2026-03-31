@@ -17,7 +17,7 @@ export default function Projects() {
       development: "Proyectos en Desarrollo",
       caseStudy: "Ver desarrollo",
       website: "Página Web",
-      github: "Código",
+      github: "GitHub",
       inDev: "En desarrollo"
     },
     en: {
@@ -25,7 +25,7 @@ export default function Projects() {
       development: "Projects in Development",
       caseStudy: "View Development",
       website: "Website",
-      github: "Code",
+      github: "GitHub",
       inDev: "In development"
     }
   };
