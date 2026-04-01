@@ -59,7 +59,7 @@ export default function Technologies() {
               { name: "JavaScript (ES6+)", src: "/icons/JavaScript.png" },
               { name: "TypeScript", src: "/icons/Typescript.png" },
               { name: "React", src: "/icons/React.png" },
-              { name: "Next.j", src: "/icons/NextJS.png" },
+              { name: "Next.js", src: "/icons/NextJS.png" },
               { name: "Tailwind CSS", src: "/icons/Tailwind.png" },
               { name: "BEM", src: "/icons/BEM.png" },
               { name: "Mobile-First", src: "/icons/MobileFirst.png" },
