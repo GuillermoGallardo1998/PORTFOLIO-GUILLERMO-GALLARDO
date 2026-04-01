@@ -53,7 +53,7 @@ export default function Footer() {
     { src: "/icons/Linkedin.png", alt: "Linkedin", link: "https://www.linkedin.com/in/guillermo-gallardo-30911822a/" },
     { src: "/icons/Instagram.png", alt: "Instagram", link: "https://www.instagram.com/just.gallardo.98/" },
     { src: "/icons/Facebook.png", alt: "Facebook", link: "https://www.facebook.com/just.Gallardo.98" },
-    { src: "/icons/Discord.png", alt: "Discord", link: "https://discord.gg/MRKGqNV9" },
+    { src: "/icons/Discord.png", alt: "Discord", link: "https://discord.gg/AX6EefUJJU" },
   ];
 
   const t = text[language];
